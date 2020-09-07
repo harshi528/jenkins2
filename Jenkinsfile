@@ -1,4 +1,4 @@
-currentBuild.displayName="CARAMELIT-#"+currentBuild.number
+currentBuild.displayName="jenkinstest-#"+currentBuild.number
 pipeline{
     agent any 
     stages{
