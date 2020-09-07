@@ -9,7 +9,7 @@ pipeline{
                 doGenerateSubmoduleConfigurations: false,
                 extensions: [],
                 submoduleCfg: [], 
-                userRemoteConfigs: [[credentialsId: 'github_credentials',
+                userRemoteConfigs: [[credentialsId: 'github_credentials2',
                 url: 'https://github.com/HariReddy910/caramelIT.git']]])
                 echo "Download finished form SCM"
             }
