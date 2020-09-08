@@ -2,12 +2,14 @@ properties([parameters([choice(choices: 'master\n dev\n test', description: 'sel
 
 pipeline{
 agent any
-triggers{
+//triggers{
      cron('* 2 * * *')
-	 }
+	 }//
 stages{
      stage('scm checkout'){
       steps{
+      script{
+      properties([pipeline Triggers([pollSCM(")])])}
         echo "pulling chances from the branch ${params.branch}"
        git url: 'https://github.com/harshi528/jenkins2.git', branch: "${params.branch}"
        echo "hi"
