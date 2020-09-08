@@ -3,7 +3,7 @@ properties([parameters([choice(choices: 'master\n dev\n test', description: 'sel
 pipeline{
 agent any
 triggers{
-     cron('* * * * *')
+     cron('* 2 * * *')
 	 }
 stages{
      stage('scm checkout'){
