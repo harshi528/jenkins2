@@ -1,0 +1,16 @@
+properties([parameters([choice(choices: 'master\n dev\n test', description: 'select branch to build', name: 'branch')])])
+
+pipeline{
+agent any
+triggers{
+     cron('* * * * *')
+	 }
+stages{
+     stage('scm checkout'){
+      steps{
+        echo "pulling chances from the branch ${params.branch}"
+       git url: 'https://github.com/harshi528/jenkins2.git', branch: "${params.branch}"
+       }
+     }
+   }
+   }
