@@ -12,7 +12,7 @@ stages{
      // properties([pipeline  Triggers([pollSCM(")])])//
      // }//
         echo "pulling chances from the branch ${params.branch}"
-       git url: 'https://github.com/harshi528/jenkins2.git', branch: "${params.branch}
+       git url: 'https://github.com/harshi528/jenkins2.git', branch: "${params.branch}"
        }
      }
    }
